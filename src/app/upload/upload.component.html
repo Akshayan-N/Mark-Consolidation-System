@@ -1,0 +1,71 @@
+<div class="upload-container">
+    <h2>Upload Excel Sheet</h2>
+    <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+      <div class="form-group">
+        <label for="reviewNumber">Review Number</label>
+        <input
+          type="number"
+          id="reviewNumber"
+          class="form-control"
+          required
+          [(ngModel)]="reviewNumber"
+          name="reviewNumber"
+          #reviewNumberInput="ngModel"
+        />
+        <div *ngIf="reviewNumberInput.invalid && reviewNumberInput.touched">
+          Review Number is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="batchYear">Batch Year</label>
+        <input
+          type="number"
+          id="batchYear"
+          class="form-control"
+          required
+          [(ngModel)]="batchYear"
+          name="batchYear"
+          #batchYearInput="ngModel"
+        />
+        <div *ngIf="batchYearInput.invalid && batchYearInput.touched">
+          Batch Year is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="semester">Semester</label>
+        <select
+          id="semester"
+          class="form-control"
+          required
+          [(ngModel)]="semester"
+          name="semester"
+          #semesterInput="ngModel"
+        >
+          <option value="" disabled>Select Semester</option>
+          <option value="1">1st Semester</option>
+          <option value="2">2nd Semester</option>
+          <option value="3">3rd Semester</option>
+          <!-- Add more semesters as needed -->
+        </select>
+        <div *ngIf="semesterInput.invalid && semesterInput.touched">
+          Semester is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="file">Upload Excel File</label>
+        <input
+          type="file"
+          id="file"
+          class="form-control"
+          required
+          (change)="onFileChange($event)"
+        />
+      </div>
+  
+      <button type="submit" [disabled]="uploadForm.invalid">Upload</button>
+    </form>
+  </div>
+  

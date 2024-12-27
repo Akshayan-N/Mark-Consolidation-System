@@ -1,0 +1,46 @@
+/* Navbar container */
+.navbar {
+    background-color: #007bff; /* Primary color */
+    padding: 15px 20px; /* Padding around the navbar */
+  }
+  
+  /* Navbar content */
+  .navbar-container {
+    display: flex; /* Align items horizontally */
+    justify-content: space-between; /* Space between title and links */
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Navbar title */
+  .navbar-title {
+    color: white; /* Text color */
+    font-size: 24px; /* Font size for the title */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Navbar links */
+  .navbar-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Align links horizontally */
+  }
+  
+  /* Individual navbar link */
+  .navbar-links li {
+    margin-left: 20px; /* Space between links */
+  }
+  
+  /* Link styling */
+  .navbar-links a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size for links */
+    transition: color 0.3s; /* Transition for hover effect */
+  }
+  
+  /* Hover effect for links */
+  .navbar-links a:hover {
+    color: #ffdd57; /* Change color on hover */
+  }
+  

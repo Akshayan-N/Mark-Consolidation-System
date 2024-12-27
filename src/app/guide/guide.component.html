@@ -1,0 +1,26 @@
+<div class="guide-container">
+    <h2>Students List - Guide</h2>
+  
+    <!-- Student Info Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Batch Year</th>
+          <th>Semester</th>
+          <th>Review Number</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.name }}</td>
+          <td>{{ student.batchYear }}</td>
+          <td>{{ student.semester }}</td>
+          <td>{{ student.reviewNumber }}</td>
+          <td>{{ student.marks }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

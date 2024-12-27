@@ -1,0 +1,33 @@
+<div class="student-container">
+    <h2>Indian Student Marks</h2>
+  
+    <!-- Student Information -->
+    <div class="student-info">
+      <p><strong>Name:</strong> {{ student.name }}</p>
+      <p><strong>Registration Number:</strong> {{ student.regNo }}</p>
+      <p><strong>Email:</strong> {{ student.email }}</p>
+    </div>
+  
+    <!-- Marks Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>1st Review (PMC/Guide)</th>
+          <th>2nd Review (PMC/Guide)</th>
+          <th>3rd Review (PMC/Guide)</th>
+          <th>Total (out of 100)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mark of studentMarks">
+          <td>{{ mark.year }}</td>
+          <td>{{ mark.firstReview.pmc }}/{{ mark.firstReview.guide }}</td>
+          <td>{{ mark.secondReview.pmc }}/{{ mark.secondReview.guide }}</td>
+          <td>{{ mark.thirdReview.pmc }}/{{ mark.thirdReview.guide }}</td>
+          <td>{{ calculateTotal(mark) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
